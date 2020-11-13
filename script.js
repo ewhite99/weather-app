@@ -17,7 +17,7 @@ getLocation.onsubmit = function() {
         .then(data => createCard(data.name, Math.round(data.main.temp)+'°F', data.weather[0].description, data.weather[0].icon))
     
     
-    document.getElementById('weather-card-container').removeChild(tempText)
+    tempText.style.display = "none"
 
     locationInput.value = ''
     return false;
